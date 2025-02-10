@@ -35,12 +35,11 @@ const addTask=() =>{
 </script>
 
 <template>
-    {{ editTask }}
     <div class="todo-app">
         <h2>Opgaveliste</h2>
         <!-- imput + knap til at tilføje  -->
         <input v-model="newTask" placeholder="Tilføj en ny opgave" />
-        <button @click="addTask" :disabled="newTask.trim() ===''">Tilføj</button>
+        <button @click="addTask" v-bind-disabled="newTask.trim() ==''">Tilføj</button>
         <!-- Ny knap til at redigere -->
         <button @click="editTask = !editTask">
     {{ editTask ? 'Gem' : 'Rediger' }}

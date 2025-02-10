@@ -38,12 +38,16 @@ const addTask=() =>{
     <div class="todo-app">
         <h2>Opgaveliste</h2>
         <!-- imput + knap til at tilføje  -->
-        <input v-model="newTask" placeholder="Tilføj en ny opgave" />
+<div class="cta_knapper">
+    <input v-model="newTask" placeholder="Tilføj en ny opgave" />
         <button @click="addTask" v-bind-disabled="newTask.trim() ==''">Tilføj</button>
         <!-- Ny knap til at redigere -->
         <button @click="editTask = !editTask">
     {{ editTask ? 'Gem' : 'Rediger' }}
     </button>
+</div>
+
+
 <!-- Ny knap til at slette  -->
 
     <!-- Listen vises hvis der er opgaver -->
@@ -81,6 +85,11 @@ const addTask=() =>{
         letter-spacing: 2px;
         color: #fff;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta_knapper{
+        display: flex;
+        gap: 10px;
     }
 
     input {
@@ -164,4 +173,5 @@ li {
         margin-top: 20px;
     }
 }
+
 </style>

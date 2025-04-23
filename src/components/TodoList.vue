@@ -2,11 +2,11 @@
 import { ref } from "vue";
 // 1 Vise en liste af opgaver (dummydata)
 const tasks = ref([
-    {id: 1, text: 'Kram en lampe'},
-    {id: 2, text: 'Fjern nullermænd fra navlen'},
-    {id: 3, text: 'Lugt til din albue'},
-    {id: 4, text: 'Hvisk til en plante'},
-    {id: 5, text: 'Giv high-five til en væg'},
+    {id: 1, text: 'Handle'},
+    {id: 2, text: 'Vaske tøj'},
+    {id: 3, text: 'Gøre rent'},
+    {id: 4, text: 'Vande planter'},
+    {id: 5, text: 'Skift sengetøj'},
 ]);
 // 2 Oprette en ny opgave
 const newTask = ref("");
@@ -70,10 +70,10 @@ const addTask=() =>{
     margin: 0 auto;
     padding: 40px;
     text-align: center;
-    background: linear-gradient(135deg, deeppink, hotpink);
-    color: #33041D;
+    background: linear-gradient(135deg, #2e2e2e, #4b5563); 
+    color: #e5e7eb;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     h2 {
         margin-bottom: 30px;
@@ -83,40 +83,43 @@ const addTask=() =>{
         width: 100%;
         font-weight: bold;
         letter-spacing: 2px;
-        color: #fff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        color: #f9fafb; 
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     }
 
-    .cta_knapper{
+    .cta_knapper {
         display: flex;
         gap: 10px;
+        justify-content: center;
     }
 
     input {
-    padding: 12px;
-    margin-right: 10px;
-    border: 2px solid #000000;
-    border-radius: 8px;
-    font-size: 1rem;
-    width: 60%;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        padding: 12px;
+        margin-right: 10px;
+        border: 2px solid #9ca3af; 
+        border-radius: 8px;
+        font-size: 1rem;
+        width: 60%;
+        background-color: #f3f4f6; 
+        color: #111827;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
-    &:focus {
-        border-color: #FF1493;
-        outline: none;
-        box-shadow: 0 0 8px rgba(255, 20, 147, 0.6);
-    }
+        &:focus {
+            border-color: #3b82f6; 
+            outline: none;
+            box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+        }
 
-    &::placeholder {
-        color: #D3D3D3; /* Lighter placeholder color */
-        font-style: italic;
+        &::placeholder {
+            color: #9ca3af;
+            font-style: italic;
+        }
     }
-}
 
     button {
         padding: 12px 24px;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #FF1493;
+        background-color: #1f2937; 
+        color: #f9fafb; 
         border: none;
         border-radius: 8px;
         cursor: pointer;
@@ -125,7 +128,7 @@ const addTask=() =>{
         transition: background-color 0.3s ease, transform 0.2s ease;
 
         &:hover:not(:disabled) {
-            background-color: rgba(0, 0, 0, 1);
+            background-color: #374151;
             transform: scale(1.05);
         }
 
@@ -134,9 +137,9 @@ const addTask=() =>{
         }
 
         &:disabled {
-            background-color: #ccc;
+            background-color: #6b7280;
             cursor: not-allowed;
-            color: #888;
+            color: #d1d5db;
         }
     }
 
@@ -145,30 +148,30 @@ const addTask=() =>{
         padding: 0;
         margin-top: 30px;
 
-li {
-    padding: 15px;
-    margin: 10px 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #FF1493;
-    border: 2px solid #000000;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        li {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #111827;
+            color: #f9fafb;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.9);
-        transform: translateX(5px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-}
+            &:hover {
+                background-color: #1f2937;
+                transform: translateX(5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+        }
     }
 
     p {
-        color: #fff;
+        color: #e5e7eb;
         font-size: 1.2rem;
         margin-top: 20px;
     }

@@ -70,21 +70,20 @@ const addTask=() =>{
     margin: 0 auto;
     padding: 40px;
     text-align: center;
-    background: linear-gradient(135deg, #2e2e2e, #4b5563); 
-    color: #e5e7eb;
+    background: #ffffff; // Hvid baggrund
+    color: #111827; // Meget mørk grå/sort tekst
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 
     h2 {
         margin-bottom: 30px;
-        font-size: 4rem;
+        font-size: 3rem;
         text-align: center;
         text-transform: uppercase;
-        width: 100%;
-        font-weight: bold;
-        letter-spacing: 2px;
-        color: #f9fafb; 
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        font-weight: 700;
+        color: #1f2937;
+        letter-spacing: 1px;
+        text-shadow: none;
     }
 
     .cta_knapper {
@@ -96,18 +95,18 @@ const addTask=() =>{
     input {
         padding: 12px;
         margin-right: 10px;
-        border: 2px solid #9ca3af; 
+        border: 1px solid #d1d5db;
         border-radius: 8px;
         font-size: 1rem;
         width: 60%;
-        background-color: #f3f4f6; 
+        background-color: #f9fafb;
         color: #111827;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
         &:focus {
-            border-color: #3b82f6; 
+            border-color: #3b82f6;
             outline: none;
-            box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
         }
 
         &::placeholder {
@@ -118,17 +117,17 @@ const addTask=() =>{
 
     button {
         padding: 12px 24px;
-        background-color: #1f2937; 
-        color: #f9fafb; 
-        border: none;
+        background-color: #e5e7eb;
+        color: #111827;
+        border: 1px solid #d1d5db;
         border-radius: 8px;
         cursor: pointer;
         font-size: 1rem;
-        font-weight: bold;
+        font-weight: 500;
         transition: background-color 0.3s ease, transform 0.2s ease;
 
         &:hover:not(:disabled) {
-            background-color: #374151;
+            background-color: #dbeafe;
             transform: scale(1.05);
         }
 
@@ -137,9 +136,9 @@ const addTask=() =>{
         }
 
         &:disabled {
-            background-color: #6b7280;
+            background-color: #f3f4f6;
             cursor: not-allowed;
-            color: #d1d5db;
+            color: #9ca3af;
         }
     }
 
@@ -151,9 +150,9 @@ const addTask=() =>{
         li {
             padding: 15px;
             margin: 10px 0;
-            background-color: #111827;
-            color: #f9fafb;
-            border: 1px solid #4b5563;
+            background-color: #f3f4f6;
+            color: #111827;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
             font-weight: 500;
             font-size: 1.1rem;
@@ -163,18 +162,19 @@ const addTask=() =>{
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
             &:hover {
-                background-color: #1f2937;
+                background-color: #e0f2fe;
                 transform: translateX(5px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             }
         }
     }
 
     p {
-        color: #e5e7eb;
-        font-size: 1.2rem;
+        color: #4b5563;
+        font-size: 1.1rem;
         margin-top: 20px;
     }
 }
+
 
 </style>
